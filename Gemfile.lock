@@ -9,6 +9,7 @@ GEM
     rack-protection (1.5.3)
       rack
     raindrops (0.13.0)
+    rake (10.4.0)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -24,5 +25,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-markup
+  rake
   sinatra
   unicorn
