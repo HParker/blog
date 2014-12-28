@@ -1,0 +1,13 @@
+I, [2014-12-27T22:45:00.803511 #1005]  INFO -- : listening on addr=/Users/adam/code/blag/tmp/sockets/unicorn.sock fd=9
+I, [2014-12-27T22:45:00.803609 #1005]  INFO -- : worker=0 spawning...
+I, [2014-12-27T22:45:00.804904 #1005]  INFO -- : worker=1 spawning...
+I, [2014-12-27T22:45:00.805386 #1005]  INFO -- : master process ready
+I, [2014-12-27T22:45:00.805883 #1025]  INFO -- : worker=0 spawned pid=1025
+I, [2014-12-27T22:45:00.806336 #1025]  INFO -- : Refreshing Gem list
+I, [2014-12-27T22:45:00.806424 #1026]  INFO -- : worker=1 spawned pid=1026
+I, [2014-12-27T22:45:00.806879 #1026]  INFO -- : Refreshing Gem list
+I, [2014-12-27T22:45:00.874633 #1025]  INFO -- : worker=0 ready
+I, [2014-12-27T22:45:00.874663 #1026]  INFO -- : worker=1 ready
+I, [2014-12-27T22:45:38.219612 #1005]  INFO -- : reaped #<Process::Status: pid 1026 exit 0> worker=1
+I, [2014-12-27T22:45:38.220032 #1005]  INFO -- : reaped #<Process::Status: pid 1025 exit 0> worker=0
+I, [2014-12-27T22:45:38.220151 #1005]  INFO -- : master complete
