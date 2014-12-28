@@ -1,0 +1,103 @@
+/*
+Description: simple blog mostly stolen from some tutorial I found freshman year.
+Author: Adam Hess
+*/
+
+#pageWrapper {
+	background-color: #605f46;
+}
+#header{
+    position: absolute;
+    z-index: 2000;
+    width: 235px;
+    top: 50px;
+}
+#header h1{
+    font-size: 30px;
+    font-weight: 400;
+    color: black;
+    padding: 20px;
+    background: #d2d2d2;
+}
+#home h2 {
+    color: black;
+}
+#nav {
+    margin-top: 20px;
+    width: 235px;
+    display:block;
+    list-style:none;
+    z-index:3;
+}
+#nav a{
+    color: #444;
+    display: block;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+    line-height: 50px;
+    padding: 0px 20px;
+    margin-bottom: 6px;
+    font-size: 22px;
+}
+#nav a:hover {
+    background: #ddd;
+}
+.panel{
+    min-width: 100%;
+    height: 98%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: -150%;
+    position: absolute;
+    background: #000;
+    z-index: 2;
+    -webkit-transition: all .8s ease-in-out;
+    -moz-transition: all .8s ease-in-out;
+    -o-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+}
+.panel h2{
+    font-size: 110px;
+    padding: 10px 0px 20px 0px;
+    margin-top: 52px;
+    color: #fff;
+    color: rgba(255,255,255,0.9);
+}
+.panel:target{
+    margin-top: 0%;
+    background-color: #605f46;
+}
+.content{
+    right: 40px;
+    left: 320px;
+    top: 0px;
+    position: absolute;
+    padding-bottom: 30px;
+}
+.content h2{
+    font-size: 110px;
+    padding: 10px 0px 20px 0px;
+    margin-top: 52px;
+    color: #fff;
+    color: rgba(255,255,255,0.9);
+}
+.content a{
+	color: #6EB1FF;
+}
+.content p{
+    font-size: 26px;
+    padding: 10px;
+    line-height: 33px;
+    color: rgba(255,255,255,0.9);
+    display: inline-block;
+    background-color: #2E2D2D;
+    padding: 10px;
+    margin: 3px 0px;
+}
+#home:target ~ #header #nav #link-home,
+#education:target ~ #header #nav #link-education,
+#project:target ~ #header #nav #link-projects,
+#work:target ~ #header #nav #link-work{
+    background: #000;
+    color: #fff;
+}
