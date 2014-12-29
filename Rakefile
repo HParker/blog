@@ -11,5 +11,5 @@ rule '.html' => '.md' do |t|
 end
 
 task :publish do
-  sh ""
+  sh "rsync -vz posts/**/*.html adam@ocean:home/adam/blog/posts/"
 end

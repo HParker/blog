@@ -10,6 +10,7 @@
 /tmp/
 /posts/
 /log/
+/public/
 ## Specific to RubyMotion:
 .dat*
 .repl_history
