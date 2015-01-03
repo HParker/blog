@@ -21,6 +21,9 @@
     <p>
         <tt>Ruby for fun, Python gets shit done and haskell for doing nothing.</tt>
     </p>
-    <h1>You will have to imagine a blog here.</h1>
-    <h3>Trust me. It <strike>will</strike> might happen.</h3>
+    <hr/>
+    <% posts.each do |post| %>
+        <h3 class="article-title"><a href="read/<%= post[:name] %>"><%= post[:name] %></a> </h3>
+        <small><%= post[:time]%></small>
+    <% end %>
 </div>

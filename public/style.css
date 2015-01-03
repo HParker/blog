@@ -30,6 +30,10 @@ body {
 }
 .container video { width: 100%; }
 
+.article-title {
+  margin-bottom: 10px;
+}
+
 .overlay h1, .overlay h2, .overlay h3, .overlay tt {
   font-weight: lighter;
   color: white;
