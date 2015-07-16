@@ -7,7 +7,7 @@ task default: :compile
 task compile: source_files.ext('.html')
 
 rule '.html' => '.md' do |t|
-  sh "pandoc -s --highlight-style pygments -c public/pandoc.css -o #{t.name.shellescape} #{t.source.shellescape}"
+  sh "pandoc -s --highlight-style pygments -c pandoc.css -o #{t.name.shellescape} #{t.source.shellescape}"
 end
 
 task :publish do
