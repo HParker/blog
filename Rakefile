@@ -1,4 +1,5 @@
 require 'rake'
+require 'shellwords'
 
 source_files = Rake::FileList.new("posts/**/*.md")
 
@@ -6,7 +7,7 @@ task default: :compile
 task compile: source_files.ext('.html')
 
 rule '.html' => '.md' do |t|
-  sh "pandoc -s --highlight-style pygments -o  #{t.name} #{t.source}"
+  sh "pandoc -s --highlight-style pygments -c public/pandoc.css -o #{t.name.shellescape} #{t.source.shellescape}"
 end
 
 task :publish do

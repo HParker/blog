@@ -1,0 +1,40 @@
+body {
+    margin: 0px 120px 0px 120px;
+    padding: 0px 20px 0px 20px;
+    border-color: #F0F0F0;
+    border-width: 1px;
+    border-right-style: solid;
+    border-left-style: solid;
+}
+
+h1, h2, h3 {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: black;
+  font-weight: lighter;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 64;
+}
+
+h2 {
+  font-size: 37;
+}
+
+h3 {
+  font-size: 32;
+  text-align: left;
+}
+
+p {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 21;
+  font-weight: 200;
+}
+
+.sourceCode {
+    background-color: #F0F0F0;
+    padding-left: 10px;
+}
