@@ -15,20 +15,53 @@ body {
   padding: 32;
 }
 
+#paper a {
+    text-decoration: none;
+    color: #779ECB;
+}
+
+#paper a:visited {
+    text-decoration: none;
+    color: #330099;
+}
+
+
 .overlay {
     left: 0;
     position:absolute;
     text-align:center;
-    top: 96px;
+    top: 70px;
     width: 100%
 }
 
 .container {
-  height: 280;
+  height: 280px;
   width: 100%;
   overflow: hidden;
+  background-color: #779ECB;
 }
-.container video { width: 100%; }
+
+.right-pull {
+    text-align: right;
+}
+
+.container p, a {
+    padding: 10px;
+    color: white;
+}
+
+.short {
+    height: 100px;
+}
+
+.arrow-up {
+	width: 0;
+	height: 0;
+	border-left: 60px solid transparent;
+	border-right: 60px solid transparent;
+
+	border-bottom: 60px solid #C0C0C0;
+}
 
 .article-title {
   margin-bottom: 10px;

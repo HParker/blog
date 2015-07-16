@@ -1,29 +1,32 @@
 <link rel="stylesheet" type="text/css" href="style.css">
-<div class="container">
-    <video class="blur" width="960" autoplay muted loop>
-        <source src="backdrop.ogg" type="video/ogg">
-    </video>
-</div>
+<div class="container"></div>
 <div class="overlay">
-    <h1>Hi, this is Adam,</h1>
-    <h2>I like to make things.</h2>
-    <h3><tt>because code is beautiful.</tt></h3>
+  <h1>{ Hi, this is Adam }</h1>
+  <h2>I like to make things.</h2>
+  <h3><tt>I think code is beautiful.</tt></h3>
+  <center><div class="arrow-up"></div></center>
 </div>
 <div id="paper">
-    <h3>So, a little about me:</h3>
-    <p>
-        I write for computers. Sometimes I get paid for it. I live in
-        <a href="http://en.wikipedia.org/wiki/Santa_Barbara,_California">Santa Barbara, CA</a>.
-        I am in love with Ruby,
-        but every day Haskell threatens to steal my heart.
-        Rust is on my list, but not today, Rust, not today.
-    </p>
-    <p>
-        <tt>Ruby for fun, Python gets shit done and haskell for doing nothing.</tt>
-    </p>
-    <hr/>
-    <% posts.each do |post| %>
-        <h3 class="article-title"><a href="read/<%= post[:name] %>"><%= post[:name] %></a> </h3>
-        <small><%= post[:time]%></small>
-    <% end %>
+  <p>
+    I write for computers. I live in
+    <a href="http://en.wikipedia.org/wiki/Santa_Barbara,_California">Santa Barbara, CA</a>,
+    but I am currenty Working in <a href="https://en.wikipedia.org/wiki/Boulder,_Colorado">Boulder, CO</a>.
+    I graduated from <a href="http://westmont.edu/">Westmont College</a> With a degree in Computer Science and Psychology Neuroscience.
+  </p>
+  <p>
+    I am in love with Ruby,
+    but every day Haskell threatens to steal my heart.
+  </p>
+  <p>
+    For me this is a place where I can write a more interesting <tt>README</tt> for my projects.
+    I want to tell people about things that I am making and there is where I would like to do it.
+  </p>
+  <hr/>
+  <% posts.each do |post| %>
+    <h3 class="article-title"><a href="read/<%= post.name %>"><%= post.name %></a> </h3>
+    <small><%= post.time %></small>
+  <% end %>
+</div>
+<div class="container short">
+  <p class="right-pull"><a href="https://twitter.com/theHessParker">Twitter</a> <a href="https://github.com/HParker">Github</a> <a href="https://www.linkedin.com/pub/adam-hess/65/b20/61b">Linkedin</a></p>
 </div>
