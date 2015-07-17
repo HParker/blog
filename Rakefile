@@ -4,17 +4,29 @@ require 'shellwords'
 article_files = Rake::FileList.new("posts/**/*.md")
 slide_files = Rake::FileList.new("slides/**/*.md")
 
-task default: :compile
 namespace :compile do
   task all: [:articles, :slides]
   task articles: article_files.ext('.html')
   task slides: slide_files.ext('.html')
 
   rule '.html' => '.md' do |t|
-    sh "pandoc -s --highlight-style pygments -c /pandoc.css --toc -o #{t.name.shellescape} #{t.source.shellescape}"
+    case t.source.split('/').first
+    when "slides"
+      arguments = "-t revealjs"
+    when "posts"
+      arguments = "--highlight-style pygments -c /pandoc.css --toc"
+    end
+    sh "pandoc -s #{arguments} #{t.source.shellescape} -o #{t.name.shellescape}"
   end
 end
 
+namespace :slide do
+  task compile: slide_files.ext('.html')
+
+  rule '.html' => '.md' do |t|
+    sh "pandoc -t revealjs -s #{t.source.shellescape} -o #{t.name.shellescape}"
+  end
+end
 
 namespace :publish do
   task all: [:articles, :slides]
