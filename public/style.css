@@ -5,6 +5,7 @@ body {
 
 .wrap {
     min-height: 100%;
+    margin-bottom: -100px;
 }
 
 .wrap:after {
@@ -57,7 +58,7 @@ body {
     color: white;
 }
 
-.short {
+.short, .wrap:after {
     height: 100px;
 }
 
