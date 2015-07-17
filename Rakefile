@@ -14,7 +14,7 @@ namespace :compile do
     when "slides"
       arguments = "-t revealjs"
     when "posts"
-      arguments = "--highlight-style pygments -c /pandoc.css --toc"
+      arguments = "--highlight-style pygments -c /pandoc.css --toc -B public/article_header.html"
     end
     sh "pandoc -s #{arguments} #{t.source.shellescape} -o #{t.name.shellescape}"
   end

@@ -7,7 +7,6 @@ class Blog < Sinatra::Base
   end
 
   get '/present/reveal.js/*.*' do
-    puts File.expand_path('reveal.js-3.1.0/' + params['splat'].join('.'), settings.public_folder)
     send_file File.expand_path('reveal.js-3.1.0/' + params['splat'].join('.'), settings.public_folder)
   end
 
