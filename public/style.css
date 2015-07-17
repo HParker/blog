@@ -1,18 +1,25 @@
 body {
- margin-top: 0px;
- margin-right: 0px;
- margin-bottom: 0px;
- margin-left: 0px
+    height: 100%;
+    margin: 0;
+}
+
+.wrap {
+    min-height: 100%;
+}
+
+.wrap:after {
+    content: "";
+    display: block;
 }
 
 #paper {
-  width: 960px;
-  margin: 10 auto;
-  border-color: #F0F0F0;
-  border-width: 1;
-  border-right-style: solid;
-  border-left-style: solid;
-  padding: 32;
+    width: 960px;
+    margin: 10 auto;
+    border-color: #F0F0F0;
+    border-width: 1;
+    border-right-style: solid;
+    border-left-style: solid;
+    padding: 32;
 }
 
 #paper a {
@@ -35,10 +42,10 @@ body {
 }
 
 .container {
-  height: 280px;
-  width: 100%;
-  overflow: hidden;
-  background-color: #779ECB;
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #779ECB;
 }
 
 .right-pull {
@@ -55,49 +62,49 @@ body {
 }
 
 .arrow-up {
-	width: 0;
-	height: 0;
-	border-left: 60px solid transparent;
-	border-right: 60px solid transparent;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
 
-	border-bottom: 60px solid #C0C0C0;
+    border-bottom: 60px solid #C0C0C0;
 }
 
 .article-title {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .overlay h1, .overlay h2, .overlay h3, .overlay tt {
-  font-weight: lighter;
-  color: white;
-  margin: 10;
-  text-align: center;
+    font-weight: lighter;
+    color: white;
+    margin: 10;
+    text-align: center;
 }
 
 h1, h2, h3 {
-  font-family: 'Helvetica Neue', sans-serif;
-  color: black;
-  font-weight: lighter;
-  letter-spacing: -1px;
-  line-height: 1;
-  text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: black;
+    font-weight: lighter;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: center;
 }
 
 h1 {
-  font-size: 64;
+    font-size: 64;
 }
 
 h2 {
-  font-size: 37;
+    font-size: 37;
 }
 
 h3 {
-  font-size: 32;
-  text-align: left;
+    font-size: 32;
+    text-align: left;
 }
 
 p {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 21;
-  font-weight: 200;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 21;
+    font-weight: 200;
 }

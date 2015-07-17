@@ -14,4 +14,8 @@ class Blog < Sinatra::Base
   get '/read/:name' do
     send_file "posts/#{params[:name]}.html"
   end
+
+  get '/present/:name' do
+    send_file "slides/#{params[:name]}.html"
+  end
 end

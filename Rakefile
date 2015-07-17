@@ -13,3 +13,7 @@ end
 task :publish do
   sh "rsync -vz posts/*.html adam@ocean:~/blog/posts/"
 end
+
+task :deploy do
+  sh "ssh adam@ocean '(cd blog; git pull; cat tmp/pids/unicorn.pid | xargs kill -QUIT; unicorn -c ./unicorn.rb -E production -D)'"
+end
