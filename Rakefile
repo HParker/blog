@@ -1,17 +1,31 @@
 require 'rake'
 require 'shellwords'
 
-source_files = Rake::FileList.new("posts/**/*.md")
+article_files = Rake::FileList.new("posts/**/*.md")
+slide_files = Rake::FileList.new("slides/**/*.md")
 
 task default: :compile
-task compile: source_files.ext('.html')
+namespace :compile do
+  task all: [:articles, :slides]
+  task articles: article_files.ext('.html')
+  task slides: slide_files.ext('.html')
 
-rule '.html' => '.md' do |t|
-  sh "pandoc -s --highlight-style pygments -c /pandoc.css --toc -o #{t.name.shellescape} #{t.source.shellescape}"
+  rule '.html' => '.md' do |t|
+    sh "pandoc -s --highlight-style pygments -c /pandoc.css --toc -o #{t.name.shellescape} #{t.source.shellescape}"
+  end
 end
 
-task :publish do
-  sh "rsync -vz posts/*.html adam@ocean:~/blog/posts/"
+
+namespace :publish do
+  task all: [:articles, :slides]
+
+  task :articles do
+    sh "rsync -vz posts/*.html adam@ocean:~/blog/posts/"
+  end
+
+  task :slides do
+    sh "rsync -vz slides/*.html adam@ocean:~/blog/slides/"
+  end
 end
 
 task :deploy do
