@@ -1,3 +1,7 @@
+html {
+    background-color: #F0F0F0;
+}
+
 body {
     margin: 0px 120px 0px 120px;
     padding: 0px 20px 0px 20px;
@@ -5,6 +9,7 @@ body {
     border-width: 1px;
     border-right-style: solid;
     border-left-style: solid;
+    background-color: white;
 }
 
 h1, h2, h3 {
@@ -20,11 +25,15 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #F0F0F0;
+    border-bottom: solid 1px #779ECB;
+}
+
+.footer {
+    height: 60px;
 }
 
 .header a, .header a:visited {
-    color: #989898;
+    color: #919191;
 }
 
 h1 {
