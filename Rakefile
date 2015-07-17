@@ -15,5 +15,21 @@ task :publish do
 end
 
 task :deploy do
-  sh "ssh adam@ocean '(cd blog; git pull; cat tmp/pids/unicorn.pid | xargs kill -QUIT; unicorn -c ./unicorn.rb -E production -D)'"
+  sh "ssh adam@ocean '(cd blog; rake server:deploy)'"
+end
+
+namespace :server do
+  task deploy: [:update_code, :kill_unicorns, :start_unicorns]
+
+  task :update_code do
+    sh "git pull"
+  end
+
+  task :kill_unicorns do
+    sh "cat tmp/pids/unicorn.pid | xargs kill"
+  end
+
+  task :start_unicorns do
+    sh "unicorn -c ./unicorn.rb -E production -D"
+  end
 end
