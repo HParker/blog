@@ -25,7 +25,7 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: solid 1px #779ECB;
+    border-bottom: solid 1px black;
 }
 
 .footer {
