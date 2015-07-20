@@ -49,6 +49,10 @@ body {
     background-color: #779ECB;
 }
 
+.container img {
+    height: 25px;
+}
+
 .right-pull {
     text-align: right;
 }
@@ -56,6 +60,7 @@ body {
 .container p, a {
     padding: 10px;
     color: white;
+    text-decoration: none;
 }
 
 .short, .wrap:after {
