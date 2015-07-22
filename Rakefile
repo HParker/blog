@@ -41,7 +41,7 @@ namespace :publish do
 end
 
 task :deploy do
-  sh "ssh adam@ocean '(cd blog; rake server:deploy)'"
+  sh "ssh adam@ocean 'source ~/.bash_profile; (cd ~/blog; rake server:deploy)'"
 end
 
 namespace :server do
